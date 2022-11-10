@@ -1,6 +1,7 @@
 const pwd = require("./pwd");
 const ls = require("./ls");
 const cat = require("./cat");
+const echo = require("./echo");
 
 function done(output) {
   process.stdout.write(output);
@@ -18,5 +19,8 @@ process.stdin.on("data", (data) => {
     ls(done);
   } else if (cmd[0] === "cat") {
     cat(done, cmd[1]);
+  } else if (cmd[0] === "echo") {
+    cmd.shift();
+    echo(done, cmd.join(" "));
   }
 });
