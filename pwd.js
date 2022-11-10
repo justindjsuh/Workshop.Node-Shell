@@ -1,3 +1,5 @@
-module.exports = function pwd() {
-  process.stdout.write(process.cwd());
+const process = require("process");
+
+module.exports = (done) => {
+  done(process.cwd());
 };
