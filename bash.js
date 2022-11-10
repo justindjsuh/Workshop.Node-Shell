@@ -4,6 +4,7 @@ const cat = require('./cat');
 const echo = require('./echo');
 const date = require('./date');
 const head = require('./head');
+const tail = require('./tail');
 
 function done(output) {
   process.stdout.write(output);
@@ -29,5 +30,8 @@ process.stdin.on('data', (data) => {
   } else if (cmd[0] === 'head') {
     cmd.shift();
     head(done, cmd);
+  } else if (cmd[0] === 'tail') {
+    cmd.shift();
+    tail(done, cmd);
   }
 });
