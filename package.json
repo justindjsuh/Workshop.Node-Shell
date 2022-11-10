@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/justindjsuh/Workshop.Node-Shell/issues"
   },
-  "homepage": "https://github.com/justindjsuh/Workshop.Node-Shell#readme"
+  "homepage": "https://github.com/justindjsuh/Workshop.Node-Shell#readme",
+  "dependencies": {
+    "date-and-time": "^2.4.1"
+  }
 }
